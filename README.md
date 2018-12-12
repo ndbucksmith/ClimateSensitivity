@@ -12,10 +12,10 @@ An interesting and more controversial question is what temperature rise may be e
 
 Temperature, lattitude, longtiude, and elevation data comes [from NASA](https://data.giss.nasa.gov/gistemp/stdata/).  The raw solar input power is calculated from the tables provided [here](http://applet-magic.com/insolation.htm).  The python program clisen.py calculates separate sensitivities for northern and southern hemisphere using both raw solar power and power corrected for albedo. The raw power produces slight higher sensitivities as the albedo correction has the effect of increasing input power differences from polar area to equator.  Teh following table shows the caluclated sensitivies for raw and corrected power.
 
-   |raw|corrected|
+  Hemispere|raw|corrected|
  --|------|-----|
- NH|0.156|0.156|
- SH|0.189|0.164|
+ N|0.156|0.156|
+ S|0.189|0.164|
 
 One great advantage of this method is that there is plenty of signal here.  Temperature ranges across 60 degrees K and power ranges over 250 watts per meter squared. Disputes over samll adjustments in temperature, common when looking at time series temperature data to tease out the magnitude of CO2 driven warming,  will not have much effect on these measured sensitivities.  Revviewers or critics might come foreward with some valid criticisms fo how power numbers are calcualted.  For example one can argue we need a different, better albedo correction or we need to incorporate downward IR power into radiant heat numbers.  But again neither of those will change the range of the results significantly. Adding in downward IR is likely to reduce sensitivity since inevitably there is more IR heating in the hot tropics than the cold poles.  The albedo correction I use is based on lattitude from this table.  I would like to replace it with something that uses, say ISCCP satellite data or the mix of land types and land to sea ratios in the region of influence around a given station.
 
