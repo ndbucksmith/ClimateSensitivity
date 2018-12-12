@@ -2,7 +2,7 @@
 
 Using surface station data to measure climate sensitivity.
 
-We will stipulate as uncontroversial facts that increased carbon dioxide in the atmosphere has a warming effect on the earths surface.  That effect is  proportional to the logarithm of any concentraion change over any period such that a doubling of CO2 adds 3.7 watts per meter squared of radiation downward to the earths surface.  The resulting formula maybe expressed as
+We will stipulate as uncontroversial facts that increased carbon dioxide in the atmosphere has a warming effect on the earths surface.  That effect is  proportional to the logarithm of any concentraion change over any period such that a doubling of CO2 adds 3.7 watts per meter squared of radiation downward to the earths surface.  The resulting formula is
 
 Power = 5.35 ln(c/C0) in watts per meter squared
 
