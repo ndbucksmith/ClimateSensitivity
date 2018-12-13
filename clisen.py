@@ -36,9 +36,25 @@ sh = climSensDataset('SH_dataset.csv')
 #print nh.Names
 #print nh.truePower
 #print nh.GISStemp
+ipccT = []; ipccP = [];
+for ix in range(50):
+  ipccT.append( -10.0 + (ix*0.8))
+  ipccP.append(180 + ix)
 
-plt.scatter(nh.truePower,nh.gt, s=40, c='b', marker= 'o')
-plt.scatter(sh.truePower, sh.gt,s=40,  c='r', marker= 's')
+plt.title('Temperature vs Power at surface stations')
+plt.xlabel('Power (watts/meter^2)')
+plt.ylabel('Station temperature (C)')
+plt.scatter(nh.Power,nh.gt, s=40, c='b', marker= 'o', label='NH')
+plt.scatter(sh.Power, sh.gt,s=40,  c='r', marker= 's', label = 'SH')
+plt.scatter(ipccP, ipccT, s = 20, c='g', marker = 'x', label= 'IPCC')
+
+for ix in range(100):
+  ipccT.append( -10.0 + (ix*0.4))
+  ipccP.append(180 + ix)
+
+plt.scatter(ipccP, ipccT, s = 20, c='g', marker = 'x', label= 'IPCC')
+
+plt.legend(loc='lower right')
 print('Albedo cotrrected sensitivities')
 fit = np.polyfit(nh.truePower, nh.GISStemp, 1)
 print('NH sens:' + str(fit))
