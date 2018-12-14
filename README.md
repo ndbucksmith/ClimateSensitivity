@@ -14,11 +14,11 @@ Our fiure 1 graph, shows GISS attionstation temperature vs. cloud refelction cor
 
 1. Corrects TOA power for cloud reflections and lattitude
 2. Applies albedo correction to those powers
-3. calculates separate sensitivities for northern and southern hemisphere using both raw solar power and power corrected for albedo.
+3. calculates separate sensitivities for northern and southern hemisphere using both cloud/lattitude corrected solar power and powerthat power corrected for albedo.
 
 The raw power produces slightly higher sensitivities as the albedo correction has the effect of increasing input power differences from polar area to equator.  The following table shows the caluclated sensitivies for raw and corrected power. The graph illustrates the response we actually see on earth, about 38 degrees C for 200 watts flux increase. In comparison IPCC low-end and best estimates of climate sensiticity rise 40 or 80 degrees for 100 watts flux increase.
 
-  Hemispere|raw|corrected|
+  Hemispere|cloud/latt corrected|+ albedo corrected|
  --|------|-----|
  N|0.179|0.159|
  S|0.219|0.191|
