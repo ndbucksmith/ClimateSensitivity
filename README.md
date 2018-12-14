@@ -14,8 +14,8 @@ Temperature, lattitude, longtiude, and elevation data comes [from NASA](https://
 
   Hemispere|raw|corrected|
  --|------|-----|
- N|0.156|0.156|
- S|0.189|0.164|
+ N|0.179|0.159|
+ S|0.219|0.191|
 
 One great advantage of this method is that there is plenty of signal here.  Temperature ranges across 60 degrees K and power ranges over 250 watts per meter squared. Disputes over small adjustments in temperature, common when looking at time series temperature data to tease out the magnitude of CO2 driven warming,  will not have much effect on these measured sensitivities.  Revviewers or critics might come foreward with some valid criticisms of how power numbers are calculated.  For example one can argue we need a different, better albedo correction or we need to incorporate downward IR power into radiant heat numbers.  But again neither of those will change the range of the results significantly. Adding in downward IR is likely to reduce sensitivity since inevitably there is more IR heating in the hot, wet tropics than the cold, dry poles.  The albedo correction I use is based on lattitude from this [table](http://www.climatedata.info/forcing/albedo/).  I would like to replace it with something that uses, say ISCCP satellite data or the mix of land types and land to sea ratios in the region of influence around a given station.
 
