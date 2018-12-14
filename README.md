@@ -6,11 +6,17 @@ We will stipulate as uncontroversial facts that increased carbon dioxide in the 
 
 Power = 5.35 ln(c/C0) in watts per meter squared
 
-An interesting and more controversial question is what temperature rise may be expected from this increased radiant heat load.  This repo implements a simple method to measure climate  sensitivty directly across datasets that contain radiant heat and average surface temperatures at selected sites across both northern and southern hemisphere. The resulting sensitvities range from 0.14 to 0.21 degrees K per watt per meter squared.  In contrast, IPCC has suggested that sensitivty is 0.8 +/- 0.4 K per watt per meeter squared. Here is an example plot of the data:
+An interesting and more controversial question is what temperature rise may be expected from this increased radiant heat load.  This repo implements a simple method to measure climate  sensitivty directly across datasets that contain radiant heat and average surface temperatures at selected sites across both northern and southern hemisphere. The resulting sensitvities range from 0.16 to 0.22 degrees K per watt per meter squared.  In contrast, IPCC calims  that sensitivty is 0.8 +/- 0.4 K per watt per meeter squared. Here is an example plot of the data:
 
 ![climate sens](figure_1.png)
 
-Temperature, lattitude, longtiude, and elevation data comes [from NASA](https://data.giss.nasa.gov/gistemp/stdata/).  The raw solar input power is calculated from the tables provided [here](http://applet-magic.com/insolation.htm).  The python program clisen.py calculates separate sensitivities for northern and southern hemisphere using both raw solar power and power corrected for albedo. The raw power produces slightly higher sensitivities as the albedo correction has the effect of increasing input power differences from polar area to equator.  The following table shows the caluclated sensitivies for raw and corrected power. The graph illustrates the response we actually see on earth, about 38 degrees C for 200 watts flux increase. In comparison IPCC low-end and best estimates of climate sensiticity rise 40 or 80 degrees for 100 watts flux increase.
+Our fiure 1 graph, shows GISS attionstation temperature vs. cloud refelction corrected inout power. Temperature, lattitude, longtiude, and elevation data comes [from NASA](https://data.giss.nasa.gov/gistemp/stdata/).  The top of atmosphere (TOA) solar input power is calculated from the tables provided [here](http://applet-magic.com/insolation.htm).  The python program clisen.py
+
+1. Corrects TOA power for cloud reflections and lattitude
+2. Applies albedo cprrection to thos epowers
+3. calculates separate sensitivities for northern and southern hemisphere using both raw solar power and power corrected for albedo.
+
+The raw power produces slightly higher sensitivities as the albedo correction has the effect of increasing input power differences from polar area to equator.  The following table shows the caluclated sensitivies for raw and corrected power. The graph illustrates the response we actually see on earth, about 38 degrees C for 200 watts flux increase. In comparison IPCC low-end and best estimates of climate sensiticity rise 40 or 80 degrees for 100 watts flux increase.
 
   Hemispere|raw|corrected|
  --|------|-----|
