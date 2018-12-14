@@ -13,7 +13,7 @@ An interesting and more controversial question is what temperature rise may be e
 Our fiure 1 graph, shows GISS attionstation temperature vs. cloud refelction corrected inout power. Temperature, lattitude, longtiude, and elevation data comes [from NASA](https://data.giss.nasa.gov/gistemp/stdata/).  The top of atmosphere (TOA) solar input power is calculated from the tables provided [here](http://applet-magic.com/insolation.htm).  The python program clisen.py
 
 1. Corrects TOA power for cloud reflections and lattitude
-2. Applies albedo cprrection to thos epowers
+2. Applies albedo correction to those powers
 3. calculates separate sensitivities for northern and southern hemisphere using both raw solar power and power corrected for albedo.
 
 The raw power produces slightly higher sensitivities as the albedo correction has the effect of increasing input power differences from polar area to equator.  The following table shows the caluclated sensitivies for raw and corrected power. The graph illustrates the response we actually see on earth, about 38 degrees C for 200 watts flux increase. In comparison IPCC low-end and best estimates of climate sensiticity rise 40 or 80 degrees for 100 watts flux increase.
