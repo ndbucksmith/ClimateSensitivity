@@ -59,7 +59,7 @@ sh = climSensDataset('SH_dataset.csv')
 ipccT = []; ipccP = [];
 for ix in range(50):
   ipccT.append( -10.0 + (ix*0.8))
-  ipccP.append(180 + ix)
+  ipccP.append(150 + ix)
 
 plt.title('Temperature vs Power at surface stations')
 plt.xlabel('Power (watts/meter^2)')
@@ -70,7 +70,7 @@ plt.scatter(ipccP, ipccT, s = 20, c='g', marker = 'x', label= 'IPCC')
 
 for ix in range(100):
   ipccT.append( -10.0 + (ix*0.4))
-  ipccP.append(180 + ix)
+  ipccP.append(150 + ix)
 
 plt.scatter(ipccP, ipccT, s = 20, c='g', marker = 'x', label= 'IPCC')
 
