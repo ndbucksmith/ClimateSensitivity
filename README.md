@@ -33,7 +33,7 @@ I should note that stations were selected to cover as wide a range of the globe 
 
 This whole exercise was inspired by this [blog post](https://wattsupwiththat.com/2017/01/05/physical-constraints-on-the-climate-sensitivity/) on climate sensitivty which demonstrates a strong fit between a simple gray body model of eath's atomosphere and ISCCP satellite data on clouds and radiation in and out of atmosphere.
 
-An important insight is that climate sensitivity, a function of power that returns seasonally averaged temperature at any location, is a continuous function across the globe and through time. It is also, for all practical purposes, [coninuously differentiable](https://en.wikipedia.org/wiki/Smoothness) and perhaps [analytic](https://en.wikipedia.org/wiki/Analytic_function).  The ratio of temperature to power change from the poles to the equator is a ground truth refutation of  IPCC alarmist seesitivities.
+An important insight is that climate sensitivity, a function of power that returns seasonally averaged temperature at any location, is a continuous function across the globe and through time. It is also, for all practical purposes, [coninuously differentiable](https://en.wikipedia.org/wiki/Smoothness) and perhaps [analytic](https://en.wikipedia.org/wiki/Analytic_function).  The ratio of temperature to power from the poles to the equator is a ground truth refutation of  IPCC alarmist sensitivities.
 
 This [news release](https://www.llnl.gov/news/cloudy-feedback-global-warming) provides further evidence of the role of clouds in short circuiting CO22 driven warming. Careful readers will note an almost perfectly soviet perversion of scientific method in the news release, necessary to avoid climate heresy.
 
