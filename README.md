@@ -12,11 +12,11 @@ An interesting and more controversial question is what temperature rise may be e
 
 Our figure 1 graph, shows GISS station temperature vs. cloud reflection corrected input power. Temperature, lattitude, longtiude, and elevation data comes [from NASA](https://data.giss.nasa.gov/gistemp/stdata/).  The top of atmosphere (TOA) solar input power is calculated from the tables provided [here](http://applet-magic.com/insolation.htm).  The python program clisen.py
 
-1. Looks up TOA power and corrects for cloud reflection
+1. Looks up TOA power and corrects for cloud reflection (call this raw power)
 2. Applies albedo correction to those powers
 3. calculates separate sensitivities for northern and southern hemisphere using both cloud/lattitude corrected solar power and that power corrected for albedo.
 
-The raw power produces slightly higher sensitivities as the albedo correction has the effect of increasing input power differences from polar area to equator.  The following table shows the caluclated sensitivies for raw and corrected power. The graph illustrates the response we actually see on earth, about 38 degrees C for 200 watts flux increase. In comparison IPCC low-end and best estimates of climate sensiticity rise 40 or 80 degrees for 100 watts flux increase.  One can argue IPPC low end response is seen from poles to maybe the point where ice melts.  But then the temperate and tropic zones short out the signal with rain and clouds.
+The raw power produces slightly higher sensitivities as the albedo correction has the effect of increasing input power differences from polar area to equator.  The following table shows the caluclated sensitivies for raw and corrected power. The graph illustrates the response we actually see on earth, about 38 degrees C for 200 watts flux increase. In comparison IPCC low-end and best estimates of climate sensiticity rise 40 and 80 degrees for 100 watts flux increase.  One can argue IPPC low-end response is seen from poles to maybe the point where ice melts.  But then the temperate and tropic zones short out the signal with rain and clouds.
 
   Hemispere|cloud/latt corrected|+ albedo corrected|
  --|------|-----|
@@ -29,10 +29,12 @@ What can account for the differences between sensitivities obtained here and the
 
 The station data is summarized in csv files for each hemishpere. Clisen.py uses [pandas](https://pandas.pydata.org) to read in the files.  pdfs of each station historical record of temperature are archived in the tempdata folder.
 
-I should note that stations were selected to cover as wide a range of the globe as possible with a strong bias towards stations at or near sea level, given the constraints of NASA GISS data coverage. The most outstanding exception to this criteria is the Anmundsen Scott station at the South Pole at an elevation of 2835 meters.  This station's temperature wasis corrected back to sea level using lapse rate of ~2C per 300 meters.  Next highest elevation station is Banglaore at 920 meters. Its GISS temperature is not correctecd.
+I should note that stations were selected to cover as wide a range of the globe as possible with a strong bias towards stations at or near sea level, given the constraints of NASA GISS data coverage. The most outstanding exception to this criteria is the Anmundsen Scott station at the South Pole at an elevation of 2835 meters elevation.  This station's temperature is corrected back to sea level using lapse rate of ~2C per 300 meters.  Next highest elevation station is Banglaore at 920 meters. Its GISS temperature is not correctecd.
 
 This whole exercise was inspired by this [blog post](https://wattsupwiththat.com/2017/01/05/physical-constraints-on-the-climate-sensitivity/) on climate sensitivty which demonstrates a strong fit between a simple gray body model of eath's atomosphere and ISCCP satellite data on clouds and radiation in and out of atmosphere.
 
 An important insight is that climate sensitivity, a function of power that returns seasonally averaged temperature at any location, is a continuous function across the globe and through time. It is also, for all practical purposes, [coninuously differentiable](https://en.wikipedia.org/wiki/Smoothness) and perhaps [analytic](https://en.wikipedia.org/wiki/Analytic_function).  The ratio of temperature to power change from the poles to the equator is a ground truth refutation of  IPCC alarmist seesitivities.
 
 This [news release](https://www.llnl.gov/news/cloudy-feedback-global-warming) provides further evidence of the role of clouds in short circuiting CO22 driven warming. Careful readers will note an almost perfectly soviet perversion of scientific method in the news release, necessary to avoid climate heresy.
+
+
