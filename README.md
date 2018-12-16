@@ -6,11 +6,13 @@ We will stipulate as uncontroversial facts that increased carbon dioxide in the 
 
 Power = 5.35 ln(c/C0) in watts per meter squared
 
-An interesting and more controversial question is what temperature rise may be expected from this increased radiant heat load.  This repo implements a simple method to measure climate  sensitivty directly across datasets that contain radiant heat and average surface temperatures at selected sites across both northern and southern hemisphere. The resulting sensitvities range from 0.16 to 0.22 degrees K per watt per meter squared.  In contrast, IPCC calims  that sensitivty is 0.8 +/- 0.4 K per watt per meeter squared. Here is an example plot of the data:
+Now this is not some universal, foundational equations of physics, like conservation of energy, black body radiation and so on.  Clearly there are big probelms here if C0, the intial CO2 concentration, is zero. The forumla is derived from some pretty elaborate radiatve models which also must incorporate assumptions, models, observations about the actions of other (highly non-lienar) processes in the atmosphere. This [series](https://scienceofdoom.com/roadmap/co2/) of articles covers really well.  
+
+The  interesting and more controversial question is what temperature rise may be expected from this increased radiant heat load.  This git repo implements a simple method to measure climate  sensitivty directly across datasets that contain radiant heat and average surface temperatures at selected sites across both northern and southern hemisphere. The resulting sensitvities range from 0.16 to 0.22 degrees K per watt per meter squared.  In contrast, IPCC calims  that sensitivty is 0.8 +/- 0.4 K per watt per meeter squared. Here is an example plot of the data:
 
 ![climate sens](figure_1.png)
 
-Our figure 1 graph, shows GISS station temperature vs. cloud reflection corrected input power. Temperature, lattitude, longtiude, and elevation data comes [from NASA](https://data.giss.nasa.gov/gistemp/stdata/).  The top of atmosphere (TOA) solar input power is calculated from the tables provided [here](http://applet-magic.com/insolation.htm).  The python program clisen.py
+Our figure 1 graph, shows GISS station temperature vs. cloud reflection corrected (raw) input power. Temperature, lattitude, longtiude, and elevation data comes [from NASA](https://data.giss.nasa.gov/gistemp/stdata/).  The top of atmosphere (TOA) solar input power is calculated from the tables provided [here](http://applet-magic.com/insolation.htm).  The python program clisen.py
 
 1. Looks up TOA power and corrects for cloud reflection (call this raw power)
 2. Applies albedo correction to those powers
