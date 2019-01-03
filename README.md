@@ -12,7 +12,7 @@ The  interesting and more controversial question is what temperature rise may be
 
 ![climate sens](figure_1.png)
 
-Our figure 1 graph, shows GISS station temperature vs. cloud reflection corrected (raw) input power. Temperature, latitude, longitude, and elevation data comes [from NASA](https://data.giss.nasa.gov/gistemp/stdata/).  The top of atmosphere (TOA) solar input power is calculated from the tables provided [here](http://applet-magic.com/insolation.htm).  The python program clisen.py
+Our figure 1 graph, shows GISS station temperature vs. input power. Temperature, latitude, longitude, and elevation data comes [from NASA](https://data.giss.nasa.gov/gistemp/stdata/).  The top of atmosphere (TOA) solar input power is calculated from the tables provided [here](http://applet-magic.com/insolation.htm).  The python program clisen.py
 
 1. Looks up TOA solar power and corrects for cloud reflection and surface reflection.
 2. Calcualtes IR power and adds to solar power
