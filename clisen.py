@@ -42,11 +42,11 @@ def global_power_check():
   widths = [5.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 5.0]
   for ix in range(len(angles)):
      latchk = angles[ix] + (widths[ix]/2.0)
-     tot, vis, ir = rawPower(latchk)
+     tot, vis, ir, ab  = rawPower(latchk)
      areas.append(area_by_latt_band(angles[ix], widths[ix]))
      VIS_power += areas[ix] * vis
      IR_power +=  areas[ix] * ir
-     tot, vis, ir = rawPower(-latchk)
+     tot, vis, ir, ab = rawPower(-latchk)
      VIS_power += areas[ix] * vis
      IR_power +=  areas[ix] * ir     
   areas = np.array(areas)
@@ -76,7 +76,7 @@ def rawPower(lat, land= 0.5, sea=0.5):
   abloss = IR_abs(lat)
   VIS = ((P*(1-refloss))- abloss)  * (1-albbylat(lat))
   IR = IR_down(lat)
-  return VIS + IR, VIS, IR
+  return VIS + IR, VIS, IR, abloss
   
 class climSensDataset():
   def __init__(self, fname):
@@ -88,15 +88,17 @@ class climSensDataset():
 #    self.Power = df.PowerA
     self.GISStemp = df.GISStemp
     self.gt = np.array(self.GISStemp)
-    self.truePower = []; self.Power =[]
+    self.Power0 = []; self.Power =[]
     for ix in range(len(self.Lattitude)):
-      tot, vis, ir = rawPower(self.Lattitude[ix])
+      tot, vis, ir, ab = rawPower(self.Lattitude[ix])
       self.Power.append(tot)
+      self.Power0.append(vis + ab)
       #self.truePower.append(self.Power[ix] * (1-albbylat(self.Lattitude[ix])))
 
 
 nh = climSensDataset('NH_dataset.csv')
 sh = climSensDataset('SH_dataset.csv')
+ha = climSensDataset('HA_dataset.csv')
 #print nh.Names
 #print nh.truePower
 #print nh.GISStemp
@@ -110,6 +112,7 @@ plt.xlabel('Power (watts/meter^2)')
 plt.ylabel('Station temperature (C)')
 plt.scatter(nh.Power,nh.gt, s=40, c='b', marker= 'o', label='N Hemi')
 plt.scatter(sh.Power, sh.gt,s=40,  c='r', marker= 's', label = 'S Hemi')
+plt.scatter(ha.Power, ha.gt,s=40,  c='g', marker= 's', label = 'Hi Alt')
 plt.scatter(ipccP, ipccT, s = 20, c='g', marker = 'x', label= 'IPCC best')
 
 for ix in range(100):
@@ -129,6 +132,14 @@ print('NH sens:' + str(fit))
 
 fit = np.polyfit(sh.Power, sh.GISStemp, 1)
 print('SH sens:' + str(fit))
+
+print('sensitivites to VIS + AB  power')
+fit = np.polyfit(nh.Power0, nh.GISStemp, 1)
+print('NH sens:' + str(fit))
+
+fit = np.polyfit(sh.Power0, sh.GISStemp, 1)
+print('SH sens:' + str(fit))
+
 
 
 plt.show()
