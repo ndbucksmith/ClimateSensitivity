@@ -14,14 +14,14 @@ The  interesting and more controversial question is what temperature rise may be
 
 Our figure 1 graph, shows GISS station temperature vs. cloud reflection corrected (raw) input power. Temperature, latitude, longitude, and elevation data comes [from NASA](https://data.giss.nasa.gov/gistemp/stdata/).  The top of atmosphere (TOA) solar input power is calculated from the tables provided [here](http://applet-magic.com/insolation.htm).  The python program clisen.py
 
-1. Looks up TOA power and corrects for cloud reflection (call this raw power)
-2. Applies albedo correction to those powers
-3. calculates separate sensitivities for northern and southern hemisphere using both raw solar power and that power corrected for albedo.
+1. Looks up TOA solar power and corrects for cloud reflection and surface reflection.
+2. Calcualtes IR power and adds to solar power
+3. calculates separate sensitivities for northern and southern hemisphere using total power VIS + IR.
 
 The following table presents the measured temperature sensitivities of combined visible (solar)+ IR (GHG) power. The graph illustrates the response we actually see on earth, about 38 degrees C for over 300 watts/m2 flux increase. In comparison IPCC low-end and best estimates of climate sensitivity rise 40 and 80 degrees for 100 watts flux increase.  One can argue IPPC low-end response is seen from poles to maybe the point where ice melts.  But then the temperate and tropic zones short out the signal with rain and clouds.
 
   Hemisphere|Sensitivity|units|
- --|------|-----|---|
+ --|------|---|
  N|0.111|K / (w/m^2)|
  S|0.126|K / (w/m^2)|
 
