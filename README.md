@@ -18,7 +18,7 @@ Our figure 1 graph, shows GISS station temperature vs. cloud reflection correcte
 2. Calcualtes IR power and adds to solar power
 3. calculates separate sensitivities for northern and southern hemisphere using total power VIS + IR.
 
-The following table presents the measured temperature sensitivities of combined visible (solar)+ IR (GHG) power. The graph illustrates the response we actually see on earth, about 38 degrees C for over 300 watts/m2 flux increase. In comparison IPCC low-end and best estimates of climate sensitivity rise 40 and 80 degrees for 100 watts flux increase.  One can argue IPPC low-end response is seen from poles to maybe the point where ice melts.  But then the temperate and tropic zones short out the signal with rain and clouds.
+The following table presents the measured temperature sensitivities of combined visible (solar)+ IR (GHG) power. The graph illustrates the response we actually see on earth, about 38 degrees C over 300 watts/m2 flux increase. In comparison IPCC low-end and best estimates of climate sensitivity rise 40 and 80 degrees for 100 watts/m2 flux increase.  One can argue IPPC low-end response is seen from poles to maybe the point where ice melts.  But then the temperate and tropic zones short out the signal with rain and clouds.
 
   Hemisphere|Sensitivity|units|
  --|------|---|
