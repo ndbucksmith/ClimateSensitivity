@@ -118,7 +118,7 @@ plt.scatter(ipccP, ipccT, s = 20, c='g', marker = 'x', label= 'IPCC best')
 CO2doubPwr = [400.0, 401.5, 403.7]
 CO2DoubTemp  = [20.0,20.0,20.0]
 
-plt.scatter(CO2doubPwr, CO2DoubTemp, s = 20, c='r', marker = 'o', label= 'CO2 double')
+plt.scatter(CO2doubPwr, CO2DoubTemp, s = 20, c='k', marker = 'o', label= 'CO2 double')
 
 for ix in range(100):
   ipccT.append( -10.0 + (ix*0.4))
