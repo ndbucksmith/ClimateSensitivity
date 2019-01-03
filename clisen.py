@@ -50,10 +50,10 @@ def global_power_check():
      VIS_power += areas[ix] * vis
      IR_power +=  areas[ix] * ir     
   areas = np.array(areas)
-  print('average VIS w/m2:', (VIS_power / (2 * areas.sum())))
-  print('average IR w/m2:', (IR_power / (2 * areas.sum())))
-  print areas.sum()
-  print(2.0 *3.14159 * earth_rad * earth_rad) / areas.sum()
+  print('global average VIS w/m2:', (VIS_power / (2 * areas.sum())))
+  print('global average IR w/m2:', (IR_power / (2 * areas.sum())))
+  print('total area: ', areas.sum())
+  print('check quotient:',(2.0 *3.14159 * earth_rad * earth_rad) / areas.sum())
   print areas
   
 #  https://scienceofdoom.com/2010/07/17/the-amazing-case-of-back-radiation/
@@ -114,6 +114,11 @@ plt.scatter(nh.Power,nh.gt, s=40, c='b', marker= 'o', label='N Hemi')
 plt.scatter(sh.Power, sh.gt,s=40,  c='r', marker= 's', label = 'S Hemi')
 plt.scatter(ha.Power, ha.gt,s=40,  c='g', marker= 's', label = 'Hi Alt')
 plt.scatter(ipccP, ipccT, s = 20, c='g', marker = 'x', label= 'IPCC best')
+
+CO2doubPwr = [400.0, 401.5, 403.7]
+CO2DoubTemp  = [20.0,20.0,20.0]
+
+plt.scatter(CO2doubPwr, CO2DoubTemp, s = 20, c='r', marker = 'o', label= 'CO2 double')
 
 for ix in range(100):
   ipccT.append( -10.0 + (ix*0.4))
