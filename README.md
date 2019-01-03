@@ -19,7 +19,7 @@ Our figure 1 graph, shows GISS station temperature vs. input power. Temperature,
 3. calculates separate sensitivities for northern and southern hemisphere using the two methods below.
 4. creates scatter plot
 
-The plots illustrate the response we actually see on earth, about 38 degrees C over 300 watts/m2 flux increase. In comparison IPCC low-end and best estimates of climate sensitivity rise 40 and 80 degrees for 100 watts/m2 flux increase.  One can argue IPPC low-end response is seen from poles to maybe the point where ice melts.  But then the temperate and tropic zones short out the signal with rain, wind, and clouds.  For perspective a horizontal line of magnitude 3.7 w/m2 is plotted at 20 C and 400 w/m2.  This is the CO2 doubling from which we are all meant to run screaming in horror.
+The plots illustrate the response we actually see on earth, about 38 degrees C over 300 watts/m2 flux increase. In comparison IPCC low-end and best estimates of climate sensitivity rise 40 and 80 degrees for 100 watts/m2 flux increase.  One can argue IPPC low-end response is seen from poles to maybe the point where ice melts.  But then the temperate and tropic zones short out the signal with rain, wind, and clouds.  For perspective a horizontal line of magnitude 3.7 w/m2 is plotted at 20 C and 400 w/m2.  This is the CO2 doubling from which we are all meant to run from, screaming in horror.
 
 
 The following table presents the measured temperature sensitivities with two definitions of input power:
