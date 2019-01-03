@@ -16,14 +16,17 @@ Our figure 1 graph, shows GISS station temperature vs. input power. Temperature,
 
 1. Looks up TOA solar power and corrects for cloud reflection and surface reflection.
 2. Calculates IR power and adds to solar power.
-3. calculates separate sensitivities for northern and southern hemisphere using total power VIS + IR.
+3. calculates separate sensitivities for northern and southern hemisphere using the two methods below.
+4. creates scatter plot
+
+The plots illustrate the response we actually see on earth, about 38 degrees C over 300 watts/m2 flux increase. In comparison IPCC low-end and best estimates of climate sensitivity rise 40 and 80 degrees for 100 watts/m2 flux increase.  One can argue IPPC low-end response is seen from poles to maybe the point where ice melts.  But then the temperate and tropic zones short out the signal with rain, wind, and clouds.
+
 
 The following table presents the measured temperature sensitivities with two definitions of input power:
 
 1. Original calc was All visible power not reflected,i.e. VIS power absorbed was included in total.
 2. Current method removes VIS absorbed and adds in IR heating power down.
 
-The graph illustrates the response we actually see on earth, about 38 degrees C over 300 watts/m2 flux increase. In comparison IPCC low-end and best estimates of climate sensitivity rise 40 and 80 degrees for 100 watts/m2 flux increase.  One can argue IPPC low-end response is seen from poles to maybe the point where ice melts.  But then the temperate and tropic zones short out the signal with rain, wind, and clouds.
 
   Hemisphere|VIS+IR|VIS+Ab|units|
  --|------|---|----|
@@ -39,6 +42,9 @@ What can account for the differences between sensitivities obtained here and the
 The station data is summarized in csv files for each hemisphere plus the High altitude dataset.. Clisen.py uses [pandas](https://pandas.pydata.org) to read in the files. Note that the power data in the files is not used.  Power is calculated based on latitude. pdfs of each station historical record of temperature are archived in the tempdata folder.
 
 I should note that stations were selected to cover as wide a range of the globe as possible with a strong bias towards stations at or near sea level, given the constraints of NASA GISS data coverage. The most outstanding exception to this criteria is the Anmundsen Scott station at the South Pole at an elevation of 2835 meters elevation.  This station's temperature is corrected back to sea level using lapse rate of ~2C per 300 meters.  Next highest elevation station is Bangalore at 920 meters. Its GISS temperature is not corrected.
+
+Spent some time in Andes around Quito Ecuador and it gave me the thought that up and down the Andes was a good place to measure climate sensitivity at high altitude.  This was the genesis of a third dataset of high altitude locations that is now on the plot.  NASA GISS does not have any stations below Colombia at high altitude in South America, so for now it is a small dataset with the stations in Colombia and some in Himalayas.
+
 
 This whole exercise was inspired by this [blog post](https://wattsupwiththat.com/2017/01/05/physical-constraints-on-the-climate-sensitivity/) on climate sensitivity which demonstrates a strong fit between a simple gray body model of earth's atmosphere and ISCCP satellite data on clouds and radiation in and out of atmosphere.
 
