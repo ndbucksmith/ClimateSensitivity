@@ -60,18 +60,18 @@ def global_power_check():
 def IR_down(lat):
   _powers = [120.0, 320.0, 400, 320,120.0]
   _latts = [-90.0,-60, 0, 60.0, 90.0 ]
-  P =  np.interp(lat, _latts, list(_powers))
+  P = 0.955 *  np.interp(lat, _latts, list(_powers))
   return P
 
 def IR_abs(lat):
   _apowers = [30.0, 78.0, 100, 78.0, 30.0]
-  _alatts = [-90.0,-60, 0, 60.0, 90.0 ]
-  P =  np.interp(lat, _alatts, list(_apowers))
+  _alatts = [ -90.0,-60, 0, 60.0, 90.0 ]
+  P =   np.interp(lat, _alatts, list(_apowers))
   return P
 
 #https://www.giss.nasa.gov/research/briefs/rossow_01/distrib.html  
 def rawPower(lat, land= 0.5, sea=0.5):
-  P =  np.interp(lat, latluts.lattitude, list(reversed(latluts.power)))
+  P = 0.955 *  np.interp(lat, latluts.lattitude, list(reversed(latluts.power)))
   refloss = cloud.reflect *((land*cloud.land)+(sea*cloud.sea))
   abloss = IR_abs(lat)
   VIS = ((P*(1-refloss))- abloss)  * (1-albbylat(lat))
