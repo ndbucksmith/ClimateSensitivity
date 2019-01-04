@@ -26,7 +26,7 @@ The following table presents the measured temperature sensitivities with two def
 
 1. Current method removes VIS absorbed and adds in IR heating power down.
 2. Original calc was All visible power not reflected,i.e. VIS power absorbed was included in total.
-3. Using IR power down only which may not make sense, but produces the highest sensitivity.
+3. Using IR power down only which may not make sense, but produces the highest sensitivity, but still only 60% of IPCC low end.
 
 
   Hemisphere|VIS+IR|VIS+Ab|IR only|units|
