@@ -24,14 +24,15 @@ The plots illustrate the response we actually see on earth, about 38 degrees C o
 
 The following table presents the measured temperature sensitivities with two definitions of input power:
 
-1. Original calc was All visible power not reflected,i.e. VIS power absorbed was included in total.
-2. Current method removes VIS absorbed and adds in IR heating power down.
+1. Current method removes VIS absorbed and adds in IR heating power down.
+2. Original calc was All visible power not reflected,i.e. VIS power absorbed was included in total.
+3. Using IR power down only which may not make sense, but produces the highest sensitivity.
 
 
-  Hemisphere|VIS+IR|VIS+Ab|units|
- --|------|---|----|
- N|0.111|0.169|K / (w/m^2)|
- S|0.126|0.201|K / (w/m^2)|
+  Hemisphere|VIS+IR|VIS+Ab|IR only|units|
+ --|------|---|----|------|
+ N|0.111|0.169|0.222|K / (w/m^2)|
+ S|0.126|0.201|0.236|K / (w/m^2)|
 
 One great advantage of this method is that there is plenty of signal here.  Temperature ranges across 60 degrees K and power ranges over 400 watts per meter squared. Disputes over small adjustments in temperature, common when looking at time series temperature data to tease out the magnitude of CO2 driven warming,  will not have much effect on these measured sensitivities.  Reviewers or critics might come forward with some valid criticisms of how power numbers are calculated.
 

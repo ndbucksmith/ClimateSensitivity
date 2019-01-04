@@ -88,10 +88,11 @@ class climSensDataset():
 #    self.Power = df.PowerA
     self.GISStemp = df.GISStemp
     self.gt = np.array(self.GISStemp)
-    self.Power0 = []; self.Power =[]
+    self.Power0 = []; self.Power =[]; self.IRPwr = [];
     for ix in range(len(self.Lattitude)):
       tot, vis, ir, ab = rawPower(self.Lattitude[ix])
       self.Power.append(tot)
+      self.IRPwr.append(ir)
       self.Power0.append(vis + ab)
       #self.truePower.append(self.Power[ix] * (1-albbylat(self.Lattitude[ix])))
 
@@ -118,7 +119,7 @@ plt.scatter(ipccP, ipccT, s = 20, c='g', marker = 'x', label= 'IPCC best')
 CO2doubPwr = [400.0, 401.5, 403.7]
 CO2DoubTemp  = [20.0,20.0,20.0]
 
-plt.scatter(CO2doubPwr, CO2DoubTemp, s = 20, c='k', marker = 'o', label= 'CO2 double')
+plt.scatter(CO2doubPwr, CO2DoubTemp, s = 20, c='k', marker = '_', label= 'CO2 double')
 
 for ix in range(100):
   ipccT.append( -10.0 + (ix*0.4))
@@ -145,6 +146,11 @@ print('NH sens:' + str(fit))
 fit = np.polyfit(sh.Power0, sh.GISStemp, 1)
 print('SH sens:' + str(fit))
 
+print('sensitivites to IR only power')
+fit = np.polyfit(nh.IRPwr, nh.GISStemp, 1)
+print('NH sens:' + str(fit))
 
+fit = np.polyfit(sh.IRPwr, sh.GISStemp, 1)
+print('SH sens:' + str(fit))
 
 plt.show()
