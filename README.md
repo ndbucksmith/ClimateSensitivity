@@ -49,7 +49,7 @@ Spent some time in Andes around Quito Ecuador and it gave me the thought that up
 
 This whole exercise was inspired by this [blog post](https://wattsupwiththat.com/2017/01/05/physical-constraints-on-the-climate-sensitivity/) on climate sensitivity which demonstrates a strong fit between a simple gray body model of earth's atmosphere and ISCCP satellite data on clouds and radiation in and out of atmosphere.
 
-Climate sensitivity, the derivative of seasonally averaged temperature  wrt  seasonally avergaed power is a continuous function across the globe and through time. It is also, for all practical purposes, [continuously differentiable](https://en.wikipedia.org/wiki/Smoothness.  The ratio of temperature to power from the poles to the equator is a ground truth refutation of  IPCC alarmist sensitivities.
+Climate sensitivity, the derivative of seasonally averaged temperature  wrt  seasonally avergaed power is a continuous function across the globe and through time. It is also, for all practical purposes, [continuously differentiable](https://en.wikipedia.org/wiki/Smoothness.  The ratio of temperature change to power change from the poles to the equator is a ground truth refutation of  IPCC alarmist sensitivities.
 
 This [news release](https://www.llnl.gov/news/cloudy-feedback-global-warming) provides further evidence of the role of clouds in short circuiting CO22 driven warming. Careful readers will note an almost perfectly soviet perversion of scientific method in the news release, necessary to avoid climate heresy.
 
