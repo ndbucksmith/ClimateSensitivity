@@ -22,7 +22,7 @@ Our figure 1 graph, shows GISS station temperature vs. input power. Temperature,
 The plots illustrate the response we actually see on earth, about 38 degrees C over 300 watts/m2 flux increase. In comparison IPCC low-end and best estimates of climate sensitivity rise 40 and 80 degrees for 100 watts/m2 flux increase.  One can argue IPPC low-end response is seen from poles to maybe the point where ice melts.  But then the temperate and tropic zones short out the signal with rain, wind, and clouds.  For perspective a horizontal line of magnitude 3.7 w/m2 is plotted at 20 C and 400 w/m2.  This is the CO2 doubling from which we are all meant to run from, screaming in horror.
 
 
-The following table presents the measured temperature sensitivities with two definitions of input power:
+The following table presents the measured temperature sensitivities with three  definitions of input power:
 
 1. Current method removes VIS absorbed and adds in IR heating power down.
 2. Original calc was All visible power not reflected,i.e. VIS power absorbed was included in total.
