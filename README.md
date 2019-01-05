@@ -6,9 +6,9 @@ We will stipulate as uncontroversial facts that increased carbon dioxide in the 
 
 Power = 5.35 ln(c/C0) in watts per meter squared
 
-Now this is not some universal, foundational equation of physics, like conservation of energy, black body radiation and so on.  Clearly there are big problems here if C0, the initial CO2 concentration, is zero. The formula is derived from radiation models which must incorporate assumptions, models, observations about the actions of other (highly non-linear) processes in the atmosphere. This [series](https://scienceofdoom.com/roadmap/co2/) of articles covers the whole topic really well.  The units of power flux are watts per meter squared averaged over a year such that they are consistent with the [Trenberth diagram.](https://scied.ucar.edu/radiation-budget-diagram-earth-atmosphere) Note that the following analysis uses local yearly average powers paired with average temperature whereas Trenberth values are global averages.  
+Now this is not some universal, foundational equation of physics, like conservation of energy, black body radiation and so on.  Clearly there are big problems here if C0, the initial CO2 concentration, is zero. The formula is derived from radiation models which must incorporate assumptions, models, observations about the actions of other (highly non-linear) processes in the atmosphere. This [series](https://scienceofdoom.com/roadmap/co2/) of articles covers the whole topic really well.  The units of power flux are watts per meter squared as a function of latitude, such that they are consistent with and calibrated to the [Trenberth diagram.](https://scied.ucar.edu/radiation-budget-diagram-earth-atmosphere.) Note that the following analysis uses local yearly average powers paired with average temperature whereas Trenberth values are global averages.  
 
-The  interesting and more controversial question is what temperature rise may be expected from this increased radiant heat load.  This git repo implements a simple method to measure climate  sensitivity directly across datasets that contain radiant heat and average surface temperatures at selected sites across both northern and southern hemisphere. The resulting sensitivities range from 0.11 to 0.13 degrees K per watt per meter squared.  In contrast, IPCC claims  that sensitivity is 0.8 +/- 0.4 K per watt per meter squared. Here is an example plot of the data:
+The  interesting and more controversial question is what temperature rise may be expected from this increased radiant heat load.  This git repo implements a simple method to measure climate  sensitivity directly across datasets that contain radiant heat and average surface temperatures at selected sites across both northern and southern hemisphere. The resulting sensitivities range from 0.12 to 0.25 degrees K per watt per meter squared.  In contrast, IPCC claims  that sensitivity is 0.8 +/- 0.4 K per watt per meter squared. Here is an example plot of the data:
 
 ![climate sens](figure_1.png)
 
@@ -31,8 +31,8 @@ The following table presents the measured temperature sensitivities with two def
 
   Hemisphere|VIS+IR|VIS+Ab|IR only|units|
  --|------|---|----|------|
- N|0.118|0.177|0.234|K / (w/m^2)|
- S|0.132|0.212|0.247|K / (w/m^2)|
+ N|0.120|0.181|0.239|K / (w/m^2)|
+ S|0.133|0.212|0.250|K / (w/m^2)|
 
 One great advantage of this method is that there is plenty of signal here.  Temperature ranges across 60 degrees K and power ranges over 400 watts per meter squared. Disputes over small adjustments in temperature, common when looking at time series temperature data to tease out the magnitude of CO2 driven warming,  will not have much effect on these measured sensitivities.  Reviewers or critics might come forward with some valid criticisms of how power numbers are calculated, but it will be hard to change the results much as all powers (VIS, IR up and down) go down as absolute value of latitude increases.
 
