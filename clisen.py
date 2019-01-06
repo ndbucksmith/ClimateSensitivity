@@ -37,9 +37,10 @@ def area_by_latt_band(latt, width):
   return area
 
 def global_power_check():
-  areas = [];VIS_power = 0.0; IR_power = 0.0
+  areas = [];VIS_power = 0.0; IR_power = 0.0; netup = 0.0;
   angles = [0.0, 5.0, 15.0, 25.0, 35.0, 45.0, 55.0, 65.0, 75.0, 85.0]
   widths = [5.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 5.0]
+  temps = [25.0, 21.0, 16.0, 12.0, 8.0, 5.0,  3.0,  -4.0, -10.0, -20.0]
   for ix in range(len(angles)):
      latchk = angles[ix] + (widths[ix]/2.0)
      tot, vis, ir, ab  = rawPower(latchk)
@@ -48,10 +49,13 @@ def global_power_check():
      IR_power +=  areas[ix] * ir
      tot, vis, ir, ab = rawPower(-latchk)
      VIS_power += areas[ix] * vis
-     IR_power +=  areas[ix] * ir     
+     IR_power +=  areas[ix] * ir
+     netup += areas[ix] * netIRup(temps[ix])
+     netup += areas[ix] * netIRup(temps[ix])    
   areas = np.array(areas)
   print('global average VIS w/m2:', (VIS_power / (2 * areas.sum())))
   print('global average IR w/m2:', (IR_power / (2 * areas.sum())))
+  print('global average net IR up w/m2:', (netup / (2 * areas.sum())))
   print('total area: ', areas.sum())
   print('check quotient:',(2.0 *3.14159 * earth_rad * earth_rad) / areas.sum())
   print areas
@@ -77,7 +81,16 @@ def rawPower(lat, land= 0.5, sea=0.5):
   VIS = ((P*(1-refloss))- abloss)  * (1-albbylat(lat))
   IR = IR_down(lat)
   return VIS + IR, VIS, IR, abloss
-  
+
+def netIRup(tem):  #approximate for sealevel
+  sb = 5.67 * ((tem + 273.15)**4)/ 100000000.0
+  #print(0.16*sb)
+  if tem > -1:
+    return 0.14 * sb
+  else:  #dry sky blow torch
+    return 0.3  * sb
+
+  5
 class climSensDataset():
   def __init__(self, fname):
     df = pd.read_csv(fname)
@@ -91,11 +104,13 @@ class climSensDataset():
     self.Power0 = []; self.Power =[]; self.IRPwr = [];
     for ix in range(len(self.Lattitude)):
       tot, vis, ir, ab = rawPower(self.Lattitude[ix])
-      self.Power.append(tot)
+      netup = netIRup(self.GISStemp[ix])
+      self.Power.append(vis-netup)
       self.IRPwr.append(ir)
       self.Power0.append(vis + ab)
       #self.truePower.append(self.Power[ix] * (1-albbylat(self.Lattitude[ix])))
 
+      #remove Amundsen Scott,8,-89,3000,141,-32.5,39.48,0.72,141,6.770142817
 
 nh = climSensDataset('NH_dataset.csv')
 sh = climSensDataset('SH_dataset.csv')
@@ -106,7 +121,7 @@ ha = climSensDataset('HA_dataset.csv')
 ipccT = []; ipccP = [];
 for ix in range(50):
   ipccT.append( -10.0 + (ix*0.8))
-  ipccP.append(150 + ix)
+  ipccP.append(0 + ix)
 
 plt.title('Temperature vs Power[VIS+IR] at surface stations')
 plt.xlabel('Power (watts/meter^2)')
@@ -116,14 +131,14 @@ plt.scatter(sh.Power, sh.gt,s=40,  c='r', marker= 's', label = 'S Hemi')
 plt.scatter(ha.Power, ha.gt,s=40,  c='g', marker= 's', label = 'Hi Alt')
 plt.scatter(ipccP, ipccT, s = 20, c='g', marker = 'x', label= 'IPCC best')
 
-CO2doubPwr = [400.0, 401.5, 403.7]
+CO2doubPwr = [40.0, 41.5, 43.7]
 CO2DoubTemp  = [20.0,20.0,20.0]
 
 plt.scatter(CO2doubPwr, CO2DoubTemp, s = 20, c='k', marker = '_', label= 'CO2 double')
 
 for ix in range(100):
   ipccT.append( -10.0 + (ix*0.4))
-  ipccP.append(150 + ix)
+  ipccP.append(0 + ix)
 
 #automated QC check  
 global_power_check()

@@ -15,26 +15,26 @@ The  interesting and more controversial question is what temperature rise may be
 Our figure 1 graph, shows GISS station temperature vs. input power. Temperature, latitude, longitude, and elevation data comes [from NASA](https://data.giss.nasa.gov/gistemp/stdata/).  The top of atmosphere (TOA) solar input power is calculated from the tables provided [here](http://applet-magic.com/insolation.htm).  The python program clisen.py
 
 1. Looks up TOA solar power and corrects for cloud reflection and surface reflection.
-2. Calculates IR power and adds to solar power.
+2. Calculates net IR power and adds to solar power. Net IR is up so it reduces total power.
 3. calculates separate sensitivities for northern and southern hemisphere using the three  power methods below.
 4. creates scatter plot
 
-The plots illustrate the response we actually see on earth, about 38 degrees C over 300 watts/m2 flux increase. In comparison IPCC low-end and best estimates of climate sensitivity rise 40 and 80 degrees for 100 watts/m2 flux increase.  One can argue IPPC low-end response is seen from poles to maybe the point where ice melts.  But then the temperate and tropic zones short out the signal with rain, wind, and clouds.  For perspective a horizontal line of magnitude 3.7 w/m2 is plotted at 20 C and 400 w/m2.  This is the CO2 doubling from which we are all meant to run from, screaming in horror.
+The plots illustrate the response we actually see on earth, about 40  degrees C over 140 watts/m2 flux increase. In comparison IPCC low-end and best estimates of climate sensitivity rise 40 and 80 degrees for 100 watts/m2 flux increase.  One can argue IPPC low-end response is seen from poles to maybe the point where ice melts.  But then the temperate and tropic zones short out the signal with rain, wind, and clouds.  For perspective a horizontal line of magnitude 3.7 w/m2 is plotted at 20 C and 40 w/m2.  This is the CO2 doubling from which we are all meant to run from, screaming in horror.
 
 
 The following table presents the measured temperature sensitivities with three  definitions of input power:
 
 1. Current method removes VIS absorbed and adds in IR heating power down. VIS and IR is matched to Trenberth 161 and 333 w/m^2.  This is the dataset in the graph. 
 2. Original calc was All visible power not reflected,i.e. VIS power absorbed was included in total.
-3. Using IR power down only which may not make sense, but produces the highest sensitivity, but still only 60% of IPCC low end.
 
 
-  Hemisphere|VIS+IR|VIS+Ab|IR only|units|
- --|------|---|----|------|
- N|0.120|0.181|0.239|K / (w/m^2)|
- S|0.133|0.212|0.250|K / (w/m^2)|
 
-One great advantage of this method is that there is plenty of signal here.  Temperature ranges across 60 degrees K and power ranges over 400 watts per meter squared. Disputes over small adjustments in temperature, common when looking at time series temperature data to tease out the magnitude of CO2 driven warming,  will not have much effect on these measured sensitivities.  Reviewers or critics might come forward with some valid criticisms of how power numbers are calculated, but it will be hard to change the results much as all powers (VIS, IR up and down) go down as absolute value of latitude increases.
+  Hemisphere|VIS+IR|VIS+Ab|units|
+ --|------|---|-----|
+ N|0.269|0.181|K / (w/m^2)|
+ S|0.295|0.212|K / (w/m^2)|
+
+One great advantage of this method is that there is plenty of signal here.  Temperature ranges across 40 degrees K and power ranges over 200 watts per meter squared. Disputes over small adjustments in temperature, common when looking at time series temperature data to tease out the magnitude of CO2 driven warming,  will not have much effect on these measured sensitivities.  Reviewers or critics might come forward with some valid criticisms of how power numbers are calculated, but it will be hard to change the results much as all powers (VIS, IR up and down) go down as absolute value of latitude increases.
 
 With first release power is calculated as the sum of VIS + IR power.  As I said before this was added 'Adding in downward IR is likely to reduce sensitivity since inevitably there is more IR heating in the hot, wet tropics than the cold, dry poles.' This improvement resulted in sensitivities just over half of VIS only sensitivities.  The albedo correction, surface reflection in Trenberth diagram, is based on latitude from this [table](http://www.climatedata.info/forcing/albedo/).  I would like to replace it with something that uses, say ISCCP satellite data or the mix of land types and land to sea ratios in the region of influence around a given station.  The reflection correction is based on[ NASA numbers](https://www.giss.nasa.gov/research/briefs/rossow_01/distrib.html) and again could benefit by satellite or other local data. IR power lookup via [science of doom.](https://scienceofdoom.com/2010/07/17/the-amazing-case-of-back-radiation/)
 
