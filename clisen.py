@@ -86,11 +86,13 @@ def netIRup(tem):  #approximate for sealevel
   sb = 5.67 * ((tem + 273.15)**4)/ 100000000.0
   #print(0.16*sb)
   if tem > -1:
-    return 0.14 * sb
-  else:  #dry sky blow torch
-    return 0.3  * sb
+    return 0.155 * sb
+  elif tem > -3:  #dry sky blow torch
+    return 0.22  * sb
+  else:
+    return 0.3 * sb
 
-  5
+  
 class climSensDataset():
   def __init__(self, fname):
     df = pd.read_csv(fname)
