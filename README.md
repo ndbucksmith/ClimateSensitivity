@@ -22,17 +22,16 @@ Our figure 1 graph, shows GISS station temperature vs. input power. Temperature,
 The plots illustrate the response we actually see on earth, about 40  degrees C over 140 watts/m2 flux increase. In comparison IPCC low-end and best estimates of climate sensitivity rise 40 and 80 degrees for 100 watts/m2 flux increase.  One can argue IPPC low-end response is seen from poles to maybe the point where ice melts.  But then the temperate and tropic zones short out the signal with rain, wind, and clouds.  For perspective a horizontal line of magnitude 3.7 w/m2 is plotted at 20 C and 40 w/m2.  This is the CO2 doubling from which we are all meant to run from, screaming in horror.
 
 
-The following table presents the measured temperature sensitivities with three  definitions of input power:
+The following table presents the measured temperature sensitivities with two  definitions of input power:
 
-1. Current method removes VIS absorbed and adds in IR heating power down. VIS and IR is matched to Trenberth 161 and 333 w/m^2.  This is the dataset in the graph. 
+1. Current method removes VIS absorbed and adds in net IR heating power down. VIS and IR are matched to Trenberth 161 and net -63 w/m^2 up.  This is the dataset in the graph. 
 2. Original calc was All visible power not reflected,i.e. VIS power absorbed was included in total.
-
 
 
   Hemisphere|VIS+IR|VIS+Ab|units|
  --|------|---|-----|
- N|0.269|0.181|K / (w/m^2)|
- S|0.295|0.212|K / (w/m^2)|
+ N|0.211|0.181|K / (w/m^2)|
+ S|0.212|0.196|K / (w/m^2)|
 
 One great advantage of this method is that there is plenty of signal here.  Temperature ranges across 40 degrees K and power ranges over 200 watts per meter squared. Disputes over small adjustments in temperature, common when looking at time series temperature data to tease out the magnitude of CO2 driven warming,  will not have much effect on these measured sensitivities.  Reviewers or critics might come forward with some valid criticisms of how power numbers are calculated, but it will be hard to change the results much as all powers (VIS, IR up and down) go down as absolute value of latitude increases.
 
