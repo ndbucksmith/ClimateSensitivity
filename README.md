@@ -1,6 +1,6 @@
 # ClimateSensitivity
 
-Using surface station data to measure climate sensitivity.
+Using surface station data to measure climate sensitivity as proof of concept. The methododolgy for correcting toa flux to surface flux is crude and a certain source of error.  [tf.climate](https://github.com/ndbucksmith/tf.climate) repo is a more comrpehe3nsive approach that can actually be validated witht est data
 
 We will stipulate as uncontroversial facts that increased carbon dioxide in the atmosphere has a warming effect on the earth's surface.  That effect is  proportional to the logarithm of any concentration change over any period such that a doubling of CO2 adds 3.7 watts per meter squared of radiation downward to the earth's surface.  The resulting formula is
 
